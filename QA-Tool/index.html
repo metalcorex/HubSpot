@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QA TOOL</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/cos.js?v=8"></script>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="style.css?v=8" rel="stylesheet">
+</head>
+<body>
+<div id="overlay">
+	<div class="emailInfo">
+		<div class="close"></div>
+		<div class="title">Email Info</div>
+		<input class="name" type="text" placeholder="Your Name" />
+		<input class="custy" type="text" placeholder="Name of Customer" />
+		<input class="ssb" type="text" placeholder="SSB" />
+		<input class="ssburl" type="text" placeholder="SSB URL" />
+		<input class="tech" type="text" placeholder="Tech's Name" />
+		<input class="emailSubmit" type="submit" value="Submit">
+	</div>
+	<div class="email">
+		<div class="close"></div>
+		<div class="emailContent"></div>
+	</div>
+</div>
+<div id="toolbar">
+	<div class="logo"><img src="https://static.hubspot.com/final/img/navigation/hs-white-logo-small.png" /></div>
+	<span>Migrations Services QA Tool</span>
+	<div class="review">
+		<div class="pages">
+			Page <span class="urlNum"></span> of <span class="urlTotal"></span>
+			<div class="shortcuts"><input type="checkbox" class="checkbox">Shortcut Keys (<i class="fa fa-caret-square-o-up"></i> / <i class="fa fa-caret-square-o-down"></i>)</div>
+		</div>
+		<div class="thumbBtns">
+			<a class="thumbsUp" href="" target="frame"><i class="fa fa-thumbs-o-up"></i></a><a class="thumbsDn" href="" target="frame"><i class="fa fa-thumbs-o-down"></i></a>
+		</div>
+		<p class="note-label">Note:</p>
+		<textarea class="note" rows="10" cols="30"></textarea>
+
+		<div class="mobile">
+			<span>Responsive Test:</span><a class="desktop"><i class="fa fa-desktop"></i></a><a class="tablet"><i class="fa fa-tablet"></i></a><a class="phone"><i class="fa fa-mobile"></i></a>
+		</div>
+
+
+		<div class="expand"><i class="fa fa-chevron-up"></i></div>
+	</div>
+
+	<div class="clearfix"></div>
+</div>
+<div id="site-wrapper">
+	<div id="QA-tool">
+		<div class="start">
+			<form class="startReview">
+				CMS URLs<br />
+				<textarea name="cmsInput" class="cmsInput">
+https://www.hubspot.com
+https://www.hubspot.com/products/get-started
+https://www.hubspot.com/our-story
+https://www.hubspot.com/partners
+https://www.hubspot.com/pricing/marketing#?currency=USD
+https://blog.hubspot.com</textarea><br />
+				COS URLs<br />
+				<textarea name="cosInput" class="cosInput">
+https://www.hubspot.com
+https://www.hubspot.com/products/get-started
+https://www.hubspot.com/our-story
+https://www.hubspot.com/partners
+https://www.hubspot.com/pricing/marketing#?currency=USD
+https://blog.hubspot.com</textarea><br />
+				<input class="startBtn" type="submit" value="Start Review">
+			</form>
+		</div>
+	</div>
+	<div id="QA-results">
+		<h2>QA Results</h2>
+		<div class="QA-resultsInner">
+			<h3>Bad URLs <input type="button" class="emailBtn" value="Email Tech"></h3>
+			<div id="badUrls">
+				<table>
+					<thead>
+						<tr>
+							<td>COS URL</td>
+							<td>CMS URL</td>
+							<td>Note</td>
+							<td class="noExport">Move</td>
+						<tr>
+					</thead>
+				</table>
+			</div>
+
+			<h3>Good URLs</h3>
+			<div id="goodUrls">
+				<table>
+					<thead>
+						<tr>
+							<td>COS URL</td>
+							<td>CMS URL</td>
+							<td>Note</td>
+							<td class="noExport">Move</td>
+						<tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="frames">
+	<div class="leftFrame">
+		<iframe id="CMSFrame"></iframe>
+		<div class="framelabel">CMS Site <a class="reload"><i class="fa fa-refresh"></i></a></div>
+	</div>
+	<div class="rightFrame">
+		<iframe id="COSFrame"></iframe>
+		<div class="framelabel">COS Site <a class="reload"><i class="fa fa-refresh"></i></a></div>
+	</div>
+</div>
+<img style="display: none;" src="http://colbyschneider.com/QA/Complete.gif" />
+</body>
+</html>
